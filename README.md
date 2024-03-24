@@ -36,3 +36,7 @@ LATENT_DIM = 100
 
 **Remarques** : Toutes les valeurs doivente être modifiées en connaissance de cause. Aucune vérification n'est effectuée sur la cohérence des valeurs.
 Le temps d'exécution peut être assez long (il restera bien sûr à moins d'une heure sur Colab pour qqs disaines d'epochs).
+
+# Exemples
+Voici quelques images de chats générés avec 20 EPOCHS :
+![Screenshot of cat for a 20 EPOCHS training](/pictures/chats_20_epochs.png)
