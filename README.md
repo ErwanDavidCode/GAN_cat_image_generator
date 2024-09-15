@@ -1,23 +1,23 @@
 # GAN_cat_image_generator
 # Presentation
-Ce projet en Python utilise la librairie PyTorch pour générer une image unique de chat grâve à la technologie des GAN.
+This Python project uses the PyTorch library to generate a unique cat image using GAN technology.
 
 # Installation
-- Installer les librairies Python
+- Install Python libraries
 ```sh
 pip install -r requirements.txt
 ```
-Lorsque le programme est executé en local, les fichiers suivants sont téléchargés en local dans le répertoire cloné : 
+When the program is run locally, the following files are downloaded locally into the cloned directory : 
 - dataset.zip
 - dataset
 
-Ils représentent les données d'entraintement et de test. Ils ne pèsent pas beaucoup plus que 50Mo chacun. Ils peuvent être supprimés sans problème après l'entrainement.
+They represent training and test data. They don't weigh much more than 50MB each. They can be easily deleted after training.
 
-Je conseil cependant d'exécuter ce code dans Google Colab pour bénéficier de la puissance de calcul de leurs CPU et/ou GPU. De plus, aucun fichier ne sera téléchargé en local si le code est exécuté sur Google Colab.
+However, I recommend running this code in Google Colab to benefit from the computing power of their CPU and/or GPU. What's more, no files will be downloaded locally if the code is run on Google Colab.
 
-# Configuration de l'algorithme
-Les valeurs internes utilisées pour l'algorithme peuvent être modifiés dans le fichier `TP_GAN_cat_image_generator`.
-Pour n'en citer que quelques-unes importantes :
+# Algorithm configuration
+The internal values used for the algorithm can be modified in the `TP_GAN_cat_image_generator` file.
+To name just a few important ones:
 
 ```python
 BATCH_SIZE = 64
@@ -28,15 +28,15 @@ LATENT_DIM = 100
 
 |argument|type|description|
 |-|-|-|
-|BATCH_SIZE|int|La taille du batch de données utilisé pour l'entrainement|
-|EPOCHS|int|Le nombre d'époch utilisé pour entrainer le modèle|
-|lr|float|Le learning rate de l'optimizer ("Adam" ici)|
-|lr|int|La taille du vecteur latent duquel part le générateur pour initier une génération d'image|
+|BATCH_SIZE|int|The size of the data batch used for training|
+|EPOCHS|int|The number of epochs used to train the model|
+|lr|float|The learning rate of the optimizer (“Adam” here)|
+|lr|int|The size of the latent vector from which the generator starts an image generation|
 
 
-**Remarques** : Toutes les valeurs doivente être modifiées en connaissance de cause. Aucune vérification n'est effectuée sur la cohérence des valeurs.
-Le temps d'exécution peut être assez long (il restera bien sûr à moins d'une heure sur Colab pour qqs disaines d'epochs).
+**Notes**: All values must be modified with full knowledge of the facts. No check is made on the consistency of values.
+Execution time can be quite long (less than an hour on Colab for several weeks of epochs).
 
-# Exemples
-Voici quelques images de chats générés avec 20 EPOCHS :
+# Examples
+Here are some images of cats generated with 20 EPOCHS:
 ![Screenshot of cat for a 20 EPOCHS training](/pictures/chats_20_epochs.png)
